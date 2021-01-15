@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AppName Client</title>
+    
+    <link rel="stylesheet/less" type="text/css" href="app/cdn/stylesheet/style.less" />
+    <link rel="stylesheet" href="app/cdn/stylesheet/fontawesome.css">
+	  <link rel="stylesheet" href="app/cdn/stylesheet/fontawesome.brands.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <div id="render"></div>
+    <script src="app/cdn/preact.min.js"></script>
+    <script src="app/cdn/less.min.js"></script>
+    <script src="app/app.js"></script>
+		<script>
+		  less.pageLoadFinished.then(() => document.querySelector('#render').style.display = 'block');
+    </script>
+  </body>
+</html>

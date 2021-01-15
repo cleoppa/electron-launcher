@@ -1,0 +1,59 @@
+{
+  "name": "electron-launcher",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build-installer": "electron-builder",
+    "build-arch32": "electron-builder --ia32",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/cleopatradev/electron-launcher"
+  },
+  "author": "github.com/cleopatradev",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^14.2.1"
+  },
+  "build": {
+    "productName": "Electron Client",
+    "appId": "network.cleopatra",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "app/cdn/favicon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "app/cdn/favicon.ico",
+      "uninstallerIcon": "app/cdn/favicon.ico",
+      "uninstallDisplayName": "Electron Client",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createStartMenuShortcut": true,
+      "include": "build/installer.nsh",
+      "deleteAppDataOnUninstall": true
+    },
+    "portable": {
+      "artifactName": "Electron.exe"
+    }
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron-log": "^4.3.1",
+    "electron-packager": "^14.2.1",
+    "electron-updater": "^4.3.5",
+    "jquery": "^3.5.1",
+    "opener": "^1.5.2",
+    "path": "^0.12.7",
+    "preact": "^10.5.8"
+  }
+}
