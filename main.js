@@ -15,7 +15,7 @@ var options = {
     'dir': './',
     'app-copyright': 'AppName',
     'app-version': '1.0.0',
-    'icon': 'app/resources/cdn/favicon.ico',
+    'icon': 'app/cdn/favicon.ico',
     'name': 'AppName Client',
     'ignore': ['./releases', './.git'],
     'out': './releases',
